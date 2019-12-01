@@ -1,0 +1,53 @@
+features:
+  - back
+  - seat
+  - legs
+  - wheels
+  - armrest
+
+products:
+  - chair:
+      required_features:
+        - back
+        - seat
+        - legs
+      optional_features:
+        - wheels
+        - armrest
+
+subassemblies:
+  - legs:
+      implements:
+        - legs
+  - seat_pillow:
+  - seat_fabric:
+  - seat:
+      requires:
+        - legs
+        - seat_pillow
+        - seat_fabric
+      implements:
+        - seat
+  - back_pillow:
+  - back_fabric:
+  - back:
+      requires:
+        - back_pillow
+        - back_fabric
+        - seat
+      implements:
+        - back
+  - wheels:
+  - legs_with_wheels:
+      requires:
+        - wheels
+        - legs
+      implements:
+        - wheels
+  - armrest:
+  - seat_with_armrest:
+      requires:
+        - armrest
+        - seat
+      implements:
+        - armrest

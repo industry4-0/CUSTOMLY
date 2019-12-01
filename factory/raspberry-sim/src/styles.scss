@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  background: $color;
+  -webkit-border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  border-radius: $width/2;
+}
+
+.circle {
+  @include circle(50px, #999);
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.yellow {
+  background: yellow;
+}

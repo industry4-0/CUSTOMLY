@@ -1,0 +1,116 @@
+<form [formGroup]="cellphone">
+
+  <mat-horizontal-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="cellphone">
+      <ng-template matStepLabel>Processor</ng-template>
+      <mat-form-field>
+        <mat-select formControlName="processor">
+          <mat-option value="processor1">
+            Processor 1
+          </mat-option>
+          <mat-option value="processor2">
+            Processor 2
+          </mat-option>
+          <mat-option value="processor3">
+            Processor 3
+          </mat-option>
+          <mat-option value="processor4">
+            Processor 4
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button (click)="onNextClick(1)">Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="cellphone">
+      <ng-template matStepLabel>Camera</ng-template>
+      <mat-form-field>
+        <mat-select formControlName="camera">
+          <mat-option value="camera_12mp">
+            12 MP
+          </mat-option>
+          <mat-option value="camera_15mp">
+            15 MP
+          </mat-option>
+          <mat-option value="false">
+            No camera
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button (click)="onNextClick(1)">Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="cellphone">
+      <ng-template matStepLabel>Screen</ng-template>
+      <mat-form-field>
+        <mat-select formControlName="display">
+          <mat-option value="display_6_oled">
+            Display 6.0 OLED
+          </mat-option>
+          <mat-option value="display_55_oled">
+            Display 5.5 OLED
+          </mat-option>
+          <mat-option value="display_65_oled">
+            Display 6.5 OLED
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button (click)="onNextClick(1)">Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="cellphone">
+      <ng-template matStepLabel>Battery capacity</ng-template>
+      <mat-form-field>
+        <mat-select formControlName="battery">
+          <mat-option value="battery_3500">
+            3500 mAh
+          </mat-option>
+          <mat-option value="battery_4000">
+            4000 mAh
+          </mat-option>
+          <mat-option value="battery_4500">
+            4500 mAh
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button (click)="onNextClick(1)">Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="cellphone">
+      <ng-template matStepLabel>Speaker</ng-template>
+      <mat-form-field>
+        <mat-select formControlName="speaker">
+          <mat-option value="speaker_stereo">
+            Stereo
+          </mat-option>
+          <mat-option value="speaker_mono">
+            Mono
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button (click)="onNextClick(1)">Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="cellphone">
+      <ng-template matStepLabel>Microphone</ng-template>
+      <mat-checkbox [checked]="isDualMic" (change)="onMicCheckboxChange($event)">Dual</mat-checkbox>
+      <div>
+        <button mat-button (click)="onNextClick(1)">Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You have the following components in your order:
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="onSubmit()">Submit</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</form>

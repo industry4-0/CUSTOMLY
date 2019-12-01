@@ -1,0 +1,10 @@
+from web3 import Web3
+websocket_provider = Web3.WebsocketProvider('ws://myipaddress:8544')
+w3 = Web3(websocket_provider)
+contract = w3.eth.contract(address='', abi=[])
+
+event_filter = contract.events.OrderReceived.createFilter(fromBlock='latest')
+while True:
+   for event in event_filter.get_new_entries():
+        my_callback(event)
+   time.sleep(2)

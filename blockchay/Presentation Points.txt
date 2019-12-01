@@ -1,0 +1,22 @@
+ - Who we are (Customly)
+ - Experience in research and industry
+ - Idea is how to move from mass prod to mass customization
+ - 80% of customers would buy more if they could customize the products (ref: Epsilon Research)
+ - Implementation involves:
+   - e-shop plugin where the customer can order a customized product
+   - The order moves to a public chain
+   - Our service receives it and analyzes it in optimized steps that can be executed by factory subassemblies and main line
+   - Once ready, the relevant software is pushed to the factory robotic arms and assembly begins
+ - Technologies used:
+   - IoT2K
+   - Blockchain
+   - Data science
+   - PLC SIM (research phase)
+ - Business Model:
+   - Έσοδα:
+     - Μελέτη
+	 - Υλοποίηση
+	 - Αγορά hardware
+	 - Συμβόλαιο συντήρησης
+   - Target group:
+     - κάθε βιομηχανία με γραμμή παραγωγής που μπορεί να κάνει assembly

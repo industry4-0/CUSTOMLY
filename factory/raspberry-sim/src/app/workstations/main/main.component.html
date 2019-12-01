@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="space-between" style="margin-top: 120px" *ngIf="poller|async">
+  <div fxLayout="column">
+    <app-part label="{{light1Label}}" [color]="light1Color"></app-part>
+  </div>
+  <div fxLayout="column">
+    <app-part label="{{light2Label}}" [color]="light2Color"></app-part>
+  </div>
+  <div fxLayout="column">
+    <app-part label="{{light3Label}}" [color]="light3Color"></app-part>
+  </div>
+  <div fxLayout="column">
+    <app-part label="{{light4Label}}" [color]="light4Color"></app-part>
+  </div>
+  <div fxLayout="column">
+    <app-part label="{{light5Label}}" [color]="light5Color"></app-part>
+  </div>
+  <div fxLayout="column">
+    <app-part label="{{light6Label}}" [color]="light6Color"></app-part>
+  </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between">
+  <div fxLayout="column">
+    <app-arm label="{{worker3Label}}" [color]="worker3Color"></app-arm>
+  </div>
+</div>

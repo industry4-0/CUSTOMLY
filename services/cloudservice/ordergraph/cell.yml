@@ -1,0 +1,94 @@
+features:
+  - processor:
+      properties:
+        - model: string
+  - display:
+      properties:
+        - size: integer
+  - microphone:
+      properties:
+        - dual: boolean
+  - speaker:
+      properties:
+        - frontfacing: boolean
+        - stereo: boolean
+  - battery:
+      properties:
+        - capacity: integer
+  - backcase:
+      properties:
+        - color: string
+  - nfc
+  - wireless_charging
+  - camera:
+      properties:
+        - megapixel: float
+
+products:
+  - cellphone:
+      required_features:
+        - processor
+        - display
+        - microphone
+        - speaker
+        - battery
+        - backcase
+      optional_features:
+        - camera
+        - nfc
+        - wireless_charging
+
+subassemblies:
+  - display:
+  - microphone:
+  - speaker:
+  - battery:
+  - backcase:
+  - nfc:
+  - wireless_charging:
+  - camera:
+  - mainboard:
+      implements:
+        - processor
+  - daughterboard:
+  - mainboard_with_microphone:
+      requires:
+        - mainboard
+        - microphone
+      implements:
+        - microphone
+  - mainboard_with_camera:
+      requires:
+        - mainboard
+        - camera
+      implements:
+        - camera
+  - daughterboard_with_speaker:
+      requires:
+        - daughterboard
+        - speaker
+      implements:
+        - speaker
+  - frame_with_mainboard:
+      requires:
+        - mainboard_with_microphone
+  - frame_with_daughterboard:
+      requires:
+        - daughterboard_with_speaker
+  - frame:
+      requires:
+        - frame_with_daughterboard
+        - frame_with_mainboard
+        - battery
+      implements:
+        - battery
+  - frame_with_backcase_and_display:
+      requires:
+        - frame
+        - backcase
+        - display
+      implements:
+        - display
+        - backcase
+      produces:
+        - cellphone

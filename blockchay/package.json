@@ -1,0 +1,22 @@
+{
+  "name": "blockchay",
+  "version": "1.0.0",
+  "description": "Setting up Ethereum RPC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/customly/blockchay.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/customly/blockchay/issues"
+  },
+  "homepage": "https://gitlab.com/customly/blockchay#README",
+  "dependencies": {
+    "web3": "^1.2.4"
+  }
+}

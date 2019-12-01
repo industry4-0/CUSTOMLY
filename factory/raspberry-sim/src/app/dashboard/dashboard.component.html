@@ -1,0 +1,71 @@
+<div class="grid-container">
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <div fxLayout="column">
+      <h1 class="mat-h1">Raspberry Simulator</h1>
+    </div>
+    <div fxLayout="column">
+      <div fxLayout="row">
+        <div class="circle yellow"></div>
+        <h2 class="mat-h2">Part Placement</h2>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <div class="circle red"></div>
+        <h2 class="mat-h2">Assembly in proccess</h2>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <div fxLayout="row">
+        <div class="circle green"></div>
+        <h2 class="mat-h2">Assembly done</h2>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <div fxLayout="row">
+        <div class="circle"></div>
+        <h2 class="mat-h2">No operation
+        </h2>
+      </div>
+
+    </div>
+  </div>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Workstation 1
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <app-first></app-first>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="2">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Main Line
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <app-main></app-main>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Workstation 2
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <app-second></app-second>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
