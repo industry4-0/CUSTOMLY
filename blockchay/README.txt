@@ -11,7 +11,10 @@ Setting up Ethereum RPC
 		"homesteadBlock": 0,
 		"eip150Block": 0,
 		"eip155Block": 0,
-		"eip158Block": 0
+		"eip158Block": 0,
+		"byzantiumBlock": 0,
+		"constantinopleBlock": 0, 
+		"petersburgBlock":0
 		},
 		"alloc": {},
 		"difficulty" : "0x40000",
